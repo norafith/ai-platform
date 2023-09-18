@@ -24,9 +24,10 @@ export default {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 1;
-  grid-row-end: span 4;
+  grid-row-end: span 8;
   padding: 15px;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 </style>
