@@ -1,5 +1,5 @@
 <script>
-import { routes } from '../../router'
+import { routes } from '../../../router'
 
 export default {
   data() {
@@ -21,7 +21,27 @@ export default {
 </template>
 
 <style scoped>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  margin: 0 10px;
+  display: inline;
+  color: white;
+}
+
+a:link,
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: grey;
+}
 .router-link-active {
-  color: red;
+  color: red !important;
 }
 </style>

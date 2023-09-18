@@ -1,18 +1,31 @@
 <script>
-import MenuContainer from './components/Menu/MenuContainer.vue'
+import HeaderContainer from './components/Header/HeaderContainer.vue'
 export default {
   components: {
-    MenuContainer
+    HeaderContainer
   }
 }
 </script>
 
 <template>
-  <header>
-    <MenuContainer />
-  </header>
-
-  <RouterView />
+  <HeaderContainer />
+  <div class="content-wrapper">
+    <RouterView v-slot="{ Component }">
+      <Suspense timeout="0">
+        <template #default>
+          <component :is="Component" />
+        </template>
+        <template #fallback>
+          <div>Loading...</div>
+        </template>
+      </Suspense>
+    </RouterView>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.content-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+</style>
