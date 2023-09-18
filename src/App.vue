@@ -1,15 +1,15 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
+<script>
+import MenuContainer from './components/Menu/MenuContainer.vue'
+export default {
+  components: {
+    MenuContainer
+  }
+}
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <div>Prikol</div>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
+    <MenuContainer />
   </header>
 
   <RouterView />
