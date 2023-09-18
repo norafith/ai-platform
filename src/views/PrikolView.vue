@@ -13,7 +13,9 @@ export default {
 
 <template>
   <div v-for="post of posts">
-    <p>{{ post.title }}</p>
+    <p>
+      {{ post.title }}
+    </p>
     <p class="body">{{ post.body }}</p>
   </div>
 </template>

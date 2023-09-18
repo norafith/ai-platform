@@ -14,7 +14,9 @@ export default {
   <nav>
     <ul>
       <li v-for="item of items">
-        <RouterLink :key="item.index" :name="item.name" :to="item.path">{{ item.name }}</RouterLink>
+        <RouterLink :key="item.index" :name="item.name" :to="item.path">{{
+          item.name[0].toUpperCase() + item.name.slice(1).toLowerCase()
+        }}</RouterLink>
       </li>
     </ul>
   </nav>
