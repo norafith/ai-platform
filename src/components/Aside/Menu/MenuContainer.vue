@@ -31,7 +31,6 @@ ul {
 
 ul > li {
   margin: 0 10px;
-  display: inline;
   color: white;
 }
 

@@ -1,13 +1,32 @@
+<script>
+export default {
+  props: ['sendRequest', 'addUserMessage'],
+  data() {
+    return {
+      text: ''
+    }
+  },
+  methods: {
+    submitForm(request) {
+      this.addUserMessage(request)
+      this.sendRequest(request)
+      this.text = ''
+    }
+  }
+}
+</script>
+
 <template>
   <section class="input-message-container">
-    <input class="input-message" type="text" placeholder="Write a message..." />
-    <button class="send-button">Send</button>
+    <form class="main-form" @submit.prevent="() => this.submitForm(this.text)">
+      <input v-model="text" class="input-message" type="text" placeholder="Write a message..." />
+      <button type="submit" class="send-button">Send</button>
+    </form>
   </section>
 </template>
 
 <style scoped>
 .input-message-container {
-  display: flex;
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: -2;
@@ -39,5 +58,13 @@
   background-color: white;
   border: 1px solid black;
   margin-left: 10px;
+}
+
+.main-form {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 </style>

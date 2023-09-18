@@ -8,14 +8,14 @@ export default {
 </script>
 
 <template>
-  <header>
-    <MenuContainer />
-  </header>
+  <MenuContainer />
 </template>
 
 <style scoped>
 header {
   padding: 25px;
   background-color: black;
+  grid-column-start: 1;
+  grid-column-end: span 2;
 }
 </style>
