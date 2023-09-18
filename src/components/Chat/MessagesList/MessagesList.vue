@@ -12,7 +12,7 @@ export default {
     <SingleMessage
       :key="index"
       v-for="(message, index) of messages"
-      :text="message.text"
+      :content="message.content"
       :role="message.role"
     />
     <PulseLoader v-if="this.isLoading" color="#000" />
@@ -28,6 +28,7 @@ export default {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
+  max-width: initial;
 }
 </style>

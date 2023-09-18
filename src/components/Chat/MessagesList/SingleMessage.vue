@@ -1,11 +1,11 @@
 <script>
 export default {
-  props: ['text', 'role']
+  props: ['content', 'role']
 }
 </script>
 
 <template>
-  <div :class="'message ' + this.role">{{ this.text }}</div>
+  <div :class="'message ' + this.role">{{ this.content }}</div>
 </template>
 
 <style scoped>
@@ -23,7 +23,7 @@ export default {
   align-self: end;
 }
 
-.message.ai {
+.message.assistant {
   background-color: black;
   border: 1px solid white;
   color: white;

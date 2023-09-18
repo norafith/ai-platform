@@ -18,13 +18,13 @@ export default {
   methods: {
     sendRequest(request) {
       this.isLoading = true
-      api.sendRequest(request).then((value) => {
-        this.messages.push({ role: 'ai', text: value })
+      api.sendRequest(request, this.messages).then((value) => {
+        this.messages.push({ role: 'assistant', content: value })
         this.isLoading = false
       })
     },
     addUserMessage(request) {
-      this.messages.push({ role: 'user', text: request })
+      this.messages.push({ role: 'user', content: request })
     }
   }
 }
