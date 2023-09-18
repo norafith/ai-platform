@@ -1,35 +1,19 @@
 # ai-platform
 
-This template should help get you started developing with Vue 3 in Vite.
+Проект, создаваемый в рамках курса "Технологии разработки интернет приложений"
 
-## Recommended IDE Setup
+## Ссылки
+Посмотреть сайт - https://ai-platform-mu.vercel.app/
+Репозиторий с телеграм ботом - https://github.com/shnepsel/telebot
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Установить зависимости
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Запуск сайта в режиме разработки
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
