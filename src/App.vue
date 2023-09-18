@@ -8,7 +8,6 @@ import { RouterLink, RouterView } from 'vue-router'
       <div>Prikol</div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
