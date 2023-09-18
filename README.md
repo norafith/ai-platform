@@ -5,7 +5,7 @@
 ## Ссылки
 
 Посмотреть сайт - https://ai-platform-mu.vercel.app/ \
-Репозиторий с телеграм ботом - https://github.com/shnepsel/telebot
+Репозиторий с телеграм ботом - https://github.com/shnepsel/neurobot
 
 ## Установить зависимости
 
