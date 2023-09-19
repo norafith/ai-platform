@@ -32,7 +32,8 @@ export default {
 }
 
 .nav-ul > li {
-  margin: 10px 0;
+  margin: 0;
+  margin-bottom: 10px;
   color: white;
 }
 

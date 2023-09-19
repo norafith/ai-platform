@@ -31,11 +31,11 @@ export default {
 </script>
 
 <template>
-  <div class="messages-container">
+  <main class="messages-container">
     <!-- <ChatOptions /> -->
     <MessagesList :messages="this.messages" :isLoading="this.isLoading" />
     <InputMessageContainer :sendRequest="this.sendRequest" :addUserMessage="this.addUserMessage" />
-  </div>
+  </main>
 </template>
 
 <style scoped>

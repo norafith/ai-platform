@@ -25,7 +25,7 @@ export default {
   grid-column-end: -1;
   grid-row-start: 1;
   grid-row-end: span 8;
-  padding: 15px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   overflow: auto;

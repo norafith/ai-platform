@@ -21,18 +21,18 @@ export default {
     <aside class="aside-wrapper">
       <AsideContent />
     </aside>
-    <main class="content-wrapper">
+    <div class="content-wrapper">
       <RouterView v-slot="{ Component }">
         <Suspense timeout="0">
           <template #default>
             <component :is="Component" />
           </template>
           <template #fallback>
-            <PulseLoader color="#000" />
+            <PulseLoader color="#000" :style="{ padding: '25px' }" />
           </template>
         </Suspense>
       </RouterView>
-    </main>
+    </div>
   </div>
 </template>
 
