@@ -1,9 +1,11 @@
 <script>
 import { routes } from '../../../router'
+import store from '../../../store/store'
 
 export default {
   data() {
     return {
+      store,
       items: routes
     }
   }
@@ -12,7 +14,7 @@ export default {
 
 <template>
   <nav>
-    <ul>
+    <ul :class="`nav-ul ${store.mobileView && 'mobile'}`">
       <li v-for="item of items">
         <RouterLink :key="item.index" :name="item.name" :to="item.path">{{
           item.name[0].toUpperCase() + item.name.slice(1).toLowerCase()
@@ -23,15 +25,23 @@ export default {
 </template>
 
 <style scoped>
-ul {
+.nav-ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-ul > li {
-  margin: 0 10px;
+.nav-ul > li {
+  margin: 10px 0;
   color: white;
+}
+
+.nav-ul.mobile {
+  display: flex;
+}
+
+.nav-ul.mobile > li {
+  margin: 0 10px;
 }
 
 a:link,

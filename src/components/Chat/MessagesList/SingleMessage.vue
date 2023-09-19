@@ -14,6 +14,7 @@ export default {
   padding: 10px;
   margin-bottom: 15px;
   max-width: 600px;
+  flex-shrink: 0;
 }
 
 .message.user {

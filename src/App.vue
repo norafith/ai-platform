@@ -1,16 +1,23 @@
 <script>
 import AsideContent from './components/Aside/AsideContent.vue'
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import store from './store/store'
+
 export default {
   components: {
     AsideContent,
     PulseLoader
+  },
+  data() {
+    return {
+      store
+    }
   }
 }
 </script>
 
 <template>
-  <div class="app-grid">
+  <div id="app-grid" :class="store.mobileView && 'mobile'">
     <aside class="aside-wrapper">
       <AsideContent />
     </aside>
@@ -33,6 +40,7 @@ export default {
 .content-wrapper {
   grid-column-start: 3;
   grid-column-end: -1;
+  overflow: auto;
 }
 
 .aside-wrapper {
@@ -42,10 +50,30 @@ export default {
   grid-column-end: span 2;
 }
 
-.app-grid {
+#app-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   height: 100%;
+}
+
+/*!TODO*/
+#app-grid.mobile {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+#app-grid.mobile .aside-wrapper,
+#app-grid.mobile .content-wrapper {
+  grid-column-end: 1;
+  grid-column-start: 1;
+}
+#app-grid.mobile .aside-wrapper {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#app-grid.mobile .content-wrapper {
+  grid-row-start: 2;
+  grid-row-end: -1;
 }
 </style>
