@@ -32,9 +32,11 @@ export default {
 .main-nav {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .nav-ul {
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -46,6 +48,18 @@ export default {
   color: white;
 }
 
+.nav-ul > li > a {
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(67, 67, 67);
+  border-radius: 5px;
+  transition: ease-in 0.5s;
+}
+.nav-ul > li > a:visited,
+.nav-ul > li > a:link {
+  color: white;
+}
 .nav-ul.mobile {
   display: flex;
   align-items: center;
@@ -60,27 +74,27 @@ export default {
   z-index: 1000;
   transform: translateX(-100%);
   opacity: 0;
-  transition: ease-in 0.5s;
+  transition: transform ease-in-out 1s;
 }
 
-.nav-ul.nav-ul.mobile.show {
+.nav-ul.mobile.show {
   transform: translateX(0);
   opacity: 1;
+  width: 100vw;
+  padding: 15px;
 }
 
 .nav-ul.mobile > li {
   margin: 10px;
+  width: 100%;
+  max-width: 300px;
 }
 
-a:link,
-a:visited {
-  color: white;
+.nav-ul > li > a:hover {
+  background-color: rgb(42, 42, 42);
 }
 
-a:hover {
-  color: grey;
-}
-.router-link-active {
-  color: red !important;
+.nav-ul > li > a.router-link-active {
+  background-color: rgb(42, 42, 42);
 }
 </style>
