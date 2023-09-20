@@ -68,10 +68,12 @@ export default {
   grid-column-end: 1;
   grid-column-start: 1;
 }
+
 #app-grid.mobile .aside-wrapper {
   grid-row-start: 1;
   grid-row-end: 2;
 }
+
 #app-grid.mobile .content-wrapper {
   grid-row-start: 2;
   grid-row-end: -1;

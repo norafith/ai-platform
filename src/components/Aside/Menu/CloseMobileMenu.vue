@@ -1,0 +1,33 @@
+<script>
+import image from '../../../assets/close.svg'
+import store from '../../../store/store'
+
+export default {
+  data() {
+    return {
+      image,
+      store
+    }
+  },
+  methods: {
+    closeMenu() {
+      console.log('WORK')
+      store.showMobileMenu = false
+    }
+  }
+}
+</script>
+
+<template>
+  <img class="close-btn" alt="Close menu" :src="image" @click="closeMenu" />
+</template>
+
+<style scoped>
+.close-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+</style>

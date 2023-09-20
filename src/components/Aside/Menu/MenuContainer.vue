@@ -1,6 +1,9 @@
 <script>
 import { routes } from '../../../router'
 import store from '../../../store/store'
+import MenuLink from './MenuLink.vue'
+import MenuIcon from './MenuIcon.vue'
+import CloseMobileMenu from './CloseMobileMenu.vue'
 
 export default {
   data() {
@@ -8,23 +11,29 @@ export default {
       store,
       items: routes
     }
-  }
+  },
+  components: { MenuLink, MenuIcon, CloseMobileMenu }
 }
 </script>
 
 <template>
-  <nav>
-    <ul :class="`nav-ul ${store.mobileView && 'mobile'}`">
+  <nav class="main-nav">
+    <MenuIcon v-if="store.mobileView" />
+    <ul :class="`nav-ul ${store.mobileView && 'mobile'} ${store.showMobileMenu && 'show'}`">
       <li v-for="item of items">
-        <RouterLink :key="item.index" :name="item.name" :to="item.path">{{
-          item.name[0].toUpperCase() + item.name.slice(1).toLowerCase()
-        }}</RouterLink>
+        <MenuLink :name="item.name" :path="item.path" :index="index" />
       </li>
+      <CloseMobileMenu v-if="store.mobileView" />
     </ul>
   </nav>
 </template>
 
 <style scoped>
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav-ul {
   list-style-type: none;
   margin: 0;
@@ -39,10 +48,28 @@ export default {
 
 .nav-ul.mobile {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: ease-in 0.5s;
+}
+
+.nav-ul.nav-ul.mobile.show {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .nav-ul.mobile > li {
-  margin: 0 10px;
+  margin: 10px;
 }
 
 a:link,
