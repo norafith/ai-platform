@@ -54,7 +54,7 @@ export default {
   width: 100%;
   background-color: rgb(67, 67, 67);
   border-radius: 5px;
-  transition: ease-in 0.5s;
+  transition: ease-in-out 0.25s;
 }
 .nav-ul > li > a:visited,
 .nav-ul > li > a:link {
@@ -81,7 +81,7 @@ export default {
   transform: translateX(0);
   opacity: 1;
   width: 100vw;
-  padding: 15px;
+  padding: 25px;
 }
 
 .nav-ul.mobile > li {
@@ -91,10 +91,10 @@ export default {
 }
 
 .nav-ul > li > a:hover {
-  background-color: rgb(42, 42, 42);
+  background-color: rgb(33, 33, 33);
 }
 
 .nav-ul > li > a.router-link-active {
-  background-color: rgb(42, 42, 42);
+  background-color: rgb(33, 33, 33);
 }
 </style>

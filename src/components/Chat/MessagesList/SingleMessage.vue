@@ -19,15 +19,13 @@ export default {
 
 .message.user {
   background-color: white;
-  border: 1px solid black;
   color: black;
   align-self: end;
 }
 
 .message.assistant {
-  background-color: black;
-  border: 1px solid white;
-  color: white;
+  background-color: rgb(157, 193, 255);
+  color: black;
   align-self: flex-start;
 }
 </style>

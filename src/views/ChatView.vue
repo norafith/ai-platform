@@ -41,7 +41,6 @@ export default {
 <style scoped>
 .messages-container {
   height: 100%;
-  background-color: grey;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(9, 1fr);

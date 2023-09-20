@@ -31,7 +31,7 @@ export default {
   grid-column-end: -1;
   grid-row-start: -2;
   grid-row-end: span 2;
-  border-top: 1px solid black;
+  border-top: 1px solid white;
   padding: 15px;
 }
 
@@ -39,24 +39,24 @@ export default {
   background: none;
   height: 100%;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 5px;
   padding: 2px 10px;
   transition: border 0.25s ease;
 }
 
 .input-message:focus {
-  border: 1px solid white;
+  border: 1px solid rgb(157, 193, 255);
 }
 
 .input-message::placeholder {
-  color: black;
+  color: white;
 }
 
 .send-button {
   border-radius: 5px;
   background-color: white;
-  border: 1px solid black;
+  border: none;
   margin-left: 10px;
 }
 

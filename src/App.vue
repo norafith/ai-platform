@@ -28,7 +28,7 @@ export default {
             <component :is="Component" />
           </template>
           <template #fallback>
-            <PulseLoader color="#000" :style="{ padding: '25px' }" />
+            <PulseLoader color="#fff" :style="{ padding: '25px' }" />
           </template>
         </Suspense>
       </RouterView>

@@ -1,6 +1,13 @@
 <script>
+import chat from '../../../assets/chat.png'
+
 export default {
-  props: ['index', 'name', 'path']
+  props: ['index', 'name', 'path'],
+  data() {
+    return {
+      chat
+    }
+  }
 }
 </script>
 
@@ -9,3 +16,5 @@ export default {
     this.name[0].toUpperCase() + this.name.slice(1).toLowerCase()
   }}</RouterLink>
 </template>
+
+<style scoped></style>
