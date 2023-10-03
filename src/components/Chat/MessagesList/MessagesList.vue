@@ -15,7 +15,7 @@ export default {
       :content="message.content"
       :role="message.role"
     />
-    <PulseLoader v-if="this.isLoading" color="#000" />
+    <PulseLoader v-if="this.isLoading" color="#fff" />
   </section>
 </template>
 

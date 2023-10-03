@@ -42,11 +42,12 @@ export default {
   border: 1px solid white;
   border-radius: 5px;
   padding: 2px 10px;
+  color: white;
   transition: border 0.25s ease;
 }
 
 .input-message:focus {
-  border: 1px solid rgb(157, 193, 255);
+  border: 1px solid rgb(150, 150, 150);
 }
 
 .input-message::placeholder {
