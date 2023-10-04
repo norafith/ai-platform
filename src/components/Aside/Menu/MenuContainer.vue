@@ -19,7 +19,7 @@ export default {
 <template>
   <nav class="main-nav">
     <MenuIcon v-if="store.mobileView" />
-    <ul :class="`nav-ul ${store.mobileView && 'mobile'} ${store.showMobileMenu && 'show'}`">
+    <ul :class="`nav-ul ${store.mobileView ? 'mobile' : ''} ${store.showMobileMenu ? 'show' : ''}`">
       <li v-for="item of items">
         <MenuLink :name="item.name" :path="item.path" :index="index" />
       </li>
@@ -40,6 +40,7 @@ export default {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  transition: transform ease-in-out 1s;
 }
 
 .nav-ul > li {
@@ -74,16 +75,18 @@ export default {
   z-index: 1000;
   transform: translateX(-100%);
   opacity: 0;
-  transition: transform ease-in-out 1s;
+}
+
+.nav-ul.mobile {
+  width: 100vw;
+  padding: 25px;
+  transition: ease-in-out 1s;
 }
 
 .nav-ul.mobile.show {
   transform: translateX(0);
   opacity: 1;
-  width: 100vw;
-  padding: 25px;
 }
-
 .nav-ul.mobile > li {
   margin: 10px;
   width: 100%;

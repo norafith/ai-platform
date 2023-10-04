@@ -11,7 +11,6 @@ export default {
   },
   methods: {
     closeMenu() {
-      console.log('WORK')
       store.showMobileMenu = false
     }
   }

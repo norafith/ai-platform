@@ -1,11 +1,13 @@
 <script>
 import store from '../store/store'
 import background from '../assets/home-background.jpg'
+import logo from '../assets/team-logo.jpg'
 export default {
   data() {
     return {
       store,
-      background
+      background,
+      logo
     }
   }
 }
@@ -14,13 +16,8 @@ export default {
 <template>
   <main :class="store.mobileView ? 'home mobile' : 'home'">
     <v-parallax class="parallax" :src="background">
-      <p class="home-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+      <h1>AI Platform</h1>
+      <h2><strong>BRT</strong> project</h2>
       <Splide :options="{ rewind: true }" aria-label="My Favorite Images">
         <SplideSlide>
           <p>
@@ -66,6 +63,9 @@ export default {
           </p>
         </SplideSlide>
       </Splide>
+      <div class="logo-container">
+        <img :src="logo" class="team-logo" alt="Team logo" />
+      </div>
     </v-parallax>
   </main>
 </template>
@@ -73,10 +73,17 @@ export default {
 <style scoped>
 .home {
   height: 120%;
+  position: relative;
 }
 .parallax {
   padding: 25px;
   height: 100%;
+}
+
+.parallax h1,
+.parallax h2,
+.parallax p {
+  text-align: center;
 }
 
 .splide__slide {
@@ -90,10 +97,24 @@ export default {
 
 .splide__slide > p {
   max-width: 800px;
-  text-align: justify;
+  text-align: center;
 }
 
 .home.mobile .splide__slide {
   font-size: 1.25rem;
+}
+
+.team-logo {
+  width: 100%;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
 }
 </style>
