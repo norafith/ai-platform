@@ -1,8 +1,10 @@
 import OpenAI from 'openai'
 
 const openai = new OpenAI({
-  apiKey: 'nv-ItoBTvET6cPdDIrRhgn0N0V4x0SSN3QgXNjJuVFdSbHAUehz',
-  baseURL: 'https://api.nova-oss.com/v1',
+  // apiKey: 'nv-ItoBTvET6cPdDIrRhgn0N0V4x0SSN3QgXNjJuVFdSbHAUehz',
+  // baseURL: 'https://api.nova-oss.com/v1',
+  apiKey: 'sk-NGFGQ0RGOGNhQzlkT3BlbkFJRUZiYmUyOTNlOTNF',
+  baseURL: 'https://api.daku.tech/v1',
   dangerouslyAllowBrowser: true
 })
 
