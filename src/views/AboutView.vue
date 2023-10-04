@@ -3,18 +3,19 @@
 <template>
   <main class="about">
     <section>
-      <p>Проект сделан, с использованием:</p>
+      <p>The project is made using</p>
       <ul>
         <li>
-          <strong>Vue</strong>. Использовали встроенные функции для роутинга, store для
-          state-менеджмента, а также UI-библиотеки
+          <strong>Vue</strong>. We used built-in functions for routing, store for state management,
+          as well as UI libraries
         </li>
         <li>
-          <strong>Python</strong>. Библиотеки для работы с API Telegram'а для создания чат-бота
+          <strong>Python</strong>. Libraries for working with the Telegram API for creating a
+          chatbot
         </li>
-        <li><strong>Docker</strong>. Для контейнеризации чат-бота</li>
-        <li><strong>Vercel</strong>. Хостинг</li>
-        <li><strong>Git, Github</strong>. Контроль версий и CI/CD для Vercel</li>
+        <li><strong>Docker</strong>. To containerize a chatbot</li>
+        <li><strong>Vercel</strong>. Hosting</li>
+        <li><strong>Git, Github</strong>. Version control and CI/CD for Vercel</li>
       </ul>
     </section>
     <section></section>

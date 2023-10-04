@@ -21,45 +21,45 @@ export default {
       <Splide :options="{ rewind: true }" aria-label="My Favorite Images">
         <SplideSlide>
           <p>
-            Разбивайте сложные запросы на части с помощью запятых или двойных двоеточий "::". Это
-            поможет нейросети лучше понимать ваш запрос и дать более точный ответ.
+            Break complex queries into parts using commas or double colons "::". This it will help
+            the neural network to better understand your request and give a more accurate answer.
           </p>
         </SplideSlide>
         <SplideSlide>
           <p>
-            Используйте правильный формат данных для обучения нейросети. Например, если вы работаете
-            с изображениями, убедитесь, что они имеют одинаковый размер и разрешение.
+            Use the correct data format to train the neural network. For example, if you work with
+            images, make sure they have the same size and resolution.
           </p>
         </SplideSlide>
         <SplideSlide>
           <p>
-            Используйте достаточное количество данных для обучения нейросети. Чем больше данных вы
-            используете, тем точнее будет работать нейросеть.
+            Use enough data to train a neural network. The more data you have if you use it, the
+            more accurately the neural network will work.
           </p>
         </SplideSlide>
         <SplideSlide>
           <p>
-            Используйте правильную архитектуру нейросети для вашей задачи. Некоторые задачи лучше
-            решаются с помощью сверточных нейронных сетей, а другие - с помощью рекуррентных
-            нейронных сетей.
+            Use the right neural network architecture for your task. Some tasks are better they are
+            solved with the help of convolutional neural networks, and others with the help of
+            recurrent neural networks.
           </p>
         </SplideSlide>
         <SplideSlide>
           <p>
-            Не забывайте про регуляризацию. Регуляризация помогает избежать переобучения нейросети и
-            улучшить ее обобщающую способность.
+            Don't forget about regularization. Regularization helps to avoid retraining the neural
+            network and improve its generalizing ability.
           </p>
         </SplideSlide>
         <SplideSlide>
           <p>
-            Используйте оптимизаторы для обучения нейросети. Оптимизаторы помогают нейросети быстрее
-            сходиться к оптимальным весам.
+            Use optimizers to train a neural network. Optimizers help neural networks faster
+            converge to the optimal weight.
           </p>
         </SplideSlide>
         <SplideSlide>
           <p>
-            Проверяйте работу нейросети на тестовых данных. Тестовые данные помогают оценить
-            точность работы нейросети и выявить возможные проблемы.
+            Check the operation of the neural network on test data. Test data helps to evaluate the
+            accuracy of the neural network and identify possible problems.
           </p>
         </SplideSlide>
       </Splide>
