@@ -20,7 +20,7 @@ export default {
   <section class="input-message-container">
     <form class="main-form" @submit.prevent="() => this.submitForm(this.text)">
       <input v-model="text" class="input-message" type="text" placeholder="Write a message..." />
-      <button type="submit" class="send-button">Send</button>
+      <button type="submit" class="send-button">✉</button>
     </form>
   </section>
 </template>
@@ -41,7 +41,7 @@ export default {
   width: 100%;
   border: 1px solid white;
   border-radius: 5px;
-  padding: 2px 10px;
+  padding: 10px;
   color: white;
   transition: border 0.25s ease;
 }
@@ -59,6 +59,10 @@ export default {
   background-color: white;
   border: none;
   margin-left: 10px;
+  color: black;
+  width: 50px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .main-form {
