@@ -1,6 +1,8 @@
 <script>
 import AuthorCard from '../components/About/AuthorCard.vue'
-import authorPhoto from '../assets/author.webp'
+import bogdanPhoto from '../assets/bogdan.webp'
+import raufPhoto from '../assets/rauf.webp'
+import timofeiPhoto from '../assets/timofei.webp'
 
 function Author(name, tgLink, vkLink, authorPhoto) {
   this.name = name
@@ -13,9 +15,9 @@ export default {
   data() {
     return {
       authors: [
-        new Author('Bogdan', 't.me/norafith', 'vk.com/norafith', authorPhoto),
-        new Author('Rauf', 't.me/khalil_r', 'vk.com/khalil_r', authorPhoto),
-        new Author('Timofei', 't.me/ts_petrov', 'vk.com/ddpsffkfsg', authorPhoto)
+        new Author('Bogdan', 't.me/norafith', 'vk.com/norafith', bogdanPhoto),
+        new Author('Rauf', 't.me/khalil_r', 'vk.com/khalil_r', raufPhoto),
+        new Author('Timofei', 't.me/ts_petrov', 'vk.com/ddpsffkfsg', timofeiPhoto)
       ]
     }
   },
