@@ -106,6 +106,7 @@ export default {
 
 .team-logo {
   width: 100%;
+  border: 1px solid white;
 }
 
 .logo-container {
